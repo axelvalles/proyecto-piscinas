@@ -30,12 +30,14 @@ function App() {
         </div>
       )}
 
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+
       <section className="grid grid-cols-12 gap-x-5">
         {data?.map((pool) => (
           <div
             key={pool.codigoPisina}
             className={`col-span-3 h-40 flex justify-center items-center 
-          ${pool.estado === "1" ? "bg-green-500-500" : "bg-red-500"}`}
+          ${pool.estado === "1" ? "bg-green-500" : "bg-red-500"}`}
           >
             <h3 className="font-bold text-2xl text-white">{pool.nombre}</h3>
           </div>
